@@ -153,15 +153,6 @@ NSGA-II (Non-dominated Sorting Genetic Algorithm II) 是一种高效的多目标
 - **Attention-CNN-BiLSTM**: 结合注意力机制的混合模型
 - **Transformer**: 基于自注意力的时序建模
 
-## 📈 性能指标
-
-在Siena数据集上的典型结果（PN14作为测试患者）：
-
-| 方法 | F1 Score | Accuracy | Precision | Recall | AUC |
-|------|----------|----------|-----------|--------|-----|
-| 基线 (10患者) | 0.7047 | 0.6570 | 0.6186 | 0.8187 | 0.7048 |
-| NSGA-II优化 (5患者) | **0.78-0.82** | **0.72-0.76** | **0.70-0.75** | **0.85-0.90** | **0.80-0.85** |
-
 ## 🛠️ 技术栈
 
 - **深度学习**: PyTorch >= 2.0.0
@@ -169,18 +160,6 @@ NSGA-II (Non-dominated Sorting Genetic Algorithm II) 是一种高效的多目标
 - **EEG处理**: pyedflib, MNE
 - **可视化**: Matplotlib, Seaborn
 - **优化**: scikit-learn, DEAP
-
-## 📚 参考文献
-
-1. **NSGA-II优化**:
-   - [A personalized and evolutionary algorithm for interpretable EEG epilepsy seizure prediction](https://www.nature.com/articles/s41598-021-82828-7) (Nature Scientific Reports, 2021)
-   - [Evolutionary transfer optimization for automated ictal pattern recognition](https://www.frontiersin.org/journals/human-neuroscience/articles/10.3389/fnhum.2024.1386168/full) (Front. Hum. Neurosci., 2024)
-
-2. **通道选择**:
-   - [EEG Channel-Selection Method for Epileptic-Seizure Classification](https://www.frontiersin.org/journals/neuroscience/articles/10.3389/fnins.2020.00593/full) (Front. Neurosci., 2020)
-
-3. **多目标优化**:
-   - [Two-dimensional CNN-based distinction of human emotions from EEG channels](https://pmc.ncbi.nlm.nih.gov/articles/PMC8894479/) (PMC, 2022)
 
 ## ⚙️ 配置说明
 
@@ -217,12 +196,7 @@ NSGA-II (Non-dominated Sorting Genetic Algorithm II) 是一种高效的多目标
 python bsdcnn_preprocess.py --data_root data/siena-scalp-eeg-database-1.0.0 --output_dir preprocessed_data
 ```
 
-### Q3: Windows多进程错误
 
-设置num_workers为0：
-```bash
---num_workers 0
-```
 
 ## 📝 待办事项
 
@@ -239,11 +213,6 @@ python bsdcnn_preprocess.py --data_root data/siena-scalp-eeg-database-1.0.0 --ou
 ## 📄 许可证
 
 本项目仅供学术研究使用。
-
-## 👥 作者
-
-- 项目维护者: [Your Name]
-- 联系方式: [Your Email]
 
 ## 🙏 致谢
 
