@@ -13,9 +13,8 @@ BATCH_SIZE=256
 MODEL_TYPE="standard"
 WINDOW_SECONDS=5
 OVERLAP_SECONDS=2.5
-EPOCHS=100
-PATIENCE=15
-SEED=42
+EPOCHS=50
+PATIENCE=10
 
 # All patients
 PATIENTS=("PN00" "PN03" "PN05" "PN06" "PN07" "PN11" "PN12" "PN13" "PN14" "PN16" "PN17")
@@ -81,8 +80,7 @@ do
       --num_workers 0 \
       --use_focal_loss \
       --focal_alpha 0.75 \
-      --patience $PATIENCE \
-      --seed $SEED
+      --patience $PATIENCE
     
     if [ $? -ne 0 ]; then
         echo "✗ Training failed for $test_patient"
